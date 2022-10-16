@@ -28,7 +28,11 @@ SOFTWARE.
 
 namespace std4esl {
 
+#ifdef STD4ESL_LOGGING_LEVEL_DEBUG
 using Logger = esl::logging::Logger<esl::logging::Level::TRACE>;
+#else
+using Logger = esl::logging::Logger<esl::logging::Level::WARN>;
+#endif
 
 } /* namespace std4esl */
 
